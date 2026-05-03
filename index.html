@@ -350,7 +350,7 @@
     }
 
     .article-card {
-      min-height: 340px;
+      min-height: 285px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -380,15 +380,15 @@
     }
 
     .article-card h3 {
-      font-size: 1.32rem;
+      font-size: 1.75rem;
       color: var(--deep-space-blue);
-      margin-bottom: 10px;
-      line-height: 1.2;
+      margin-bottom: 0;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
     }
 
     .article-card p {
-      color: var(--muted-text);
-      margin-bottom: 18px;
+      display: none;
     }
 
     .resource-links {
@@ -434,6 +434,18 @@
       background:
         linear-gradient(135deg, rgba(19, 41, 61, 0.72), rgba(27, 152, 224, 0.24)),
         url("images/project-placeholder.jpg") center/cover;
+    }
+
+    .project-image.togal-image {
+      background:
+        linear-gradient(135deg, rgba(19, 41, 61, 0.35), rgba(27, 152, 224, 0.15)),
+        url("images/togal-ai.png") center/cover;
+    }
+
+    .project-image.final-project-image {
+      background:
+        linear-gradient(135deg, rgba(19, 41, 61, 0.35), rgba(27, 152, 224, 0.15)),
+        url("images/final-project.jpg") center/cover;
     }
 
     .project-content {
@@ -484,6 +496,29 @@
       color: var(--deep-space-blue);
       font-size: 0.82rem;
       font-weight: 700;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .project-links a {
+      font-size: 0.82rem;
+      font-weight: 800;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(36, 123, 160, 0.1);
+      color: var(--baltic-blue);
+      border: 1px solid transparent;
+      transition: 0.2s ease;
+    }
+
+    .project-links a:hover {
+      background: var(--deep-space-blue);
+      color: var(--white);
     }
 
     /* CTA */
@@ -925,63 +960,59 @@
             <h2>Semester Work</h2>
           </div>
           <p>
-            A collection of the major projects completed during the semester, including objectives, process, tools used, and final results.
+            A collection of the major projects completed during the semester, including objectives,
+            tools used, deliverables, and final outputs.
           </p>
         </div>
 
         <div class="project-list">
           <article class="project-card">
-            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
+            <div class="project-image toggal-image" role="img" aria-label="TOGAL.AI project image"></div>
             <div class="project-content">
               <div class="project-tag">Project 01</div>
-              <h3>AI Tool for Construction Workflow</h3>
+              <h3>TOGAL.AI</h3>
               <p>
-                Describe the project objective, the problem you were trying to solve, the AI tools used,
-                and the final outcome. This could include estimating support, document review, scheduling,
-                risk analysis, safety planning, or facilities management applications.
+                In this project, I used TOGAL.AI to perform quantity takeoffs for four different site plans.
+                The platform generated takeoff results directly from the drawings, allowing me to compare
+                automated quantity extraction across multiple sites. This project focused on exploring how AI
+                can support estimating workflows, improve speed, and simplify takeoff tasks in construction.
               </p>
               <div class="project-meta">
-                <span>AI Tools</span>
-                <span>Construction Management</span>
-                <span>Class Project</span>
+                <span>AI Takeoffs</span>
+                <span>Estimating</span>
+                <span>Construction Technology</span>
               </div>
-              <a href="#projects" target="_blank" class="btn btn-primary">View Project</a>
+              <div class="project-links">
+                <a href="Projects/togal-site-01.pdf" target="_blank">Site 01</a>
+                <a href="Projects/togal-site-02.pdf" target="_blank">Site 02</a>
+                <a href="Projects/togal-site-03.pdf" target="_blank">Site 03</a>
+                <a href="Projects/togal-site-04.pdf" target="_blank">Site 04</a>
+              </div>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
+            <div class="project-image final-project-image" role="img" aria-label="Final project image"></div>
             <div class="project-content">
               <div class="project-tag">Project 02</div>
-              <h3>Facilities Management Analysis</h3>
+              <h3>Final Project: Investigating AI Adoption in Construction Companies</h3>
               <p>
-                Use this space to explain a facilities management project. Include the task, how AI supported the work,
-                what data or documents were reviewed, and what recommendations were developed.
+                This final project explored how artificial intelligence is being adopted, implemented, and
+                managed within construction companies. The work combined academic literature with industry
+                interviews to identify current practices, common challenges, organizational readiness, and
+                the overall value companies are finding in AI adoption across the AEC industry.
               </p>
               <div class="project-meta">
-                <span>Facilities</span>
-                <span>Analysis</span>
-                <span>Decision Support</span>
+                <span>Research</span>
+                <span>AI Adoption</span>
+                <span>Construction Industry</span>
               </div>
-              <a href="#projects" target="_blank" class="btn btn-primary">View Project</a>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
-            <div class="project-content">
-              <div class="project-tag">Project 03</div>
-              <h3>Final Course Project</h3>
-              <p>
-                Add the final project here. Mention the deliverables, the workflow followed, challenges faced,
-                and the final result. You can link to screenshots, PDFs, videos, or an interactive demo.
-              </p>
-              <div class="project-meta">
-                <span>Final Deliverable</span>
-                <span>Portfolio</span>
-                <span>Interactive Work</span>
+              <div class="project-links">
+                <a href="Projects/final-project-literature-review.pdf" target="_blank">Literature Review</a>
+                <a href="Projects/final-project-research-report.pdf" target="_blank">Research Report</a>
+                <a href="Projects/final-project-presentation.pdf" target="_blank">Presentation</a>
+                <a href="Projects/final-project-interview-notes.pdf" target="_blank">Interview Notes</a>
               </div>
-              <a href="#projects" target="_blank" class="btn btn-primary">View Project</a>
             </div>
           </article>
         </div>
