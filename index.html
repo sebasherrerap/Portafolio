@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AI in Construction & Facilities Management Portfolio</title>
-
   <style>
     :root {
       --deep-space-blue: #13293d;
@@ -51,6 +50,7 @@
       margin: 0 auto;
     }
 
+    /* NAVBAR */
     .navbar {
       position: sticky;
       top: 0;
@@ -105,6 +105,7 @@
       box-shadow: 0 8px 20px rgba(19, 41, 61, 0.18);
     }
 
+    /* HERO */
     .hero {
       min-height: 86vh;
       display: grid;
@@ -206,7 +207,7 @@
       aspect-ratio: 4 / 5;
       border-radius: 22px;
       background:
-        linear-gradient(135deg, rgba(19, 41, 61, 0.25), rgba(27, 152, 224, 0.08)),
+        linear-gradient(135deg, rgba(19, 41, 61, 0.65), rgba(27, 152, 224, 0.28)),
         url("images/profile.webp") center/cover;
       overflow: hidden;
     }
@@ -236,6 +237,7 @@
       color: rgba(255, 255, 255, 0.78);
     }
 
+    /* GENERAL SECTION */
     section {
       padding: 90px 0;
     }
@@ -270,6 +272,7 @@
       color: var(--muted-text);
     }
 
+    /* ABOUT */
     .about {
       background: var(--white);
     }
@@ -309,6 +312,33 @@
       font-size: 1.28rem;
     }
 
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.65rem;
+      color: var(--baltic-blue);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted-text);
+      font-size: 0.9rem;
+    }
+
+    /* WEEKLY ARTICLES */
     .articles {
       background: var(--alice-blue);
     }
@@ -320,7 +350,7 @@
     }
 
     .article-card {
-      min-height: 285px;
+      min-height: 340px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -346,26 +376,26 @@
       background: linear-gradient(135deg, var(--baltic-blue), var(--blue-bell));
       color: var(--white);
       font-weight: 900;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
     .article-card h3 {
-      font-size: 1.75rem;
+      font-size: 1.32rem;
       color: var(--deep-space-blue);
-      margin-bottom: 0;
-      line-height: 1.08;
-      letter-spacing: -0.035em;
+      margin-bottom: 10px;
+      line-height: 1.2;
     }
 
     .article-card p {
-      display: none;
+      color: var(--muted-text);
+      margin-bottom: 18px;
     }
 
     .resource-links {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 22px;
+      margin-top: 18px;
     }
 
     .resource-links a {
@@ -377,11 +407,7 @@
       color: var(--baltic-blue);
     }
 
-    .resource-links a:hover {
-      background: var(--deep-space-blue);
-      color: var(--white);
-    }
-
+    /* PROJECTS */
     .projects {
       background: var(--white);
     }
@@ -408,18 +434,6 @@
       background:
         linear-gradient(135deg, rgba(19, 41, 61, 0.72), rgba(27, 152, 224, 0.24)),
         url("images/project-placeholder.jpg") center/cover;
-    }
-
-    .project-image.togal-image {
-      background:
-        linear-gradient(135deg, rgba(19, 41, 61, 0.35), rgba(27, 152, 224, 0.15)),
-        url("images/togal-ai.jpg") center/cover;
-    }
-
-    .project-image.final-project-image {
-      background:
-        linear-gradient(135deg, rgba(19, 41, 61, 0.35), rgba(27, 152, 224, 0.15)),
-        url("images/final-project.jpg") center/cover;
     }
 
     .project-content {
@@ -472,29 +486,7 @@
       font-weight: 700;
     }
 
-    .project-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    .project-links a {
-      font-size: 0.82rem;
-      font-weight: 800;
-      padding: 10px 14px;
-      border-radius: 999px;
-      background: rgba(36, 123, 160, 0.1);
-      color: var(--baltic-blue);
-      border: 1px solid transparent;
-      transition: 0.2s ease;
-    }
-
-    .project-links a:hover {
-      background: var(--deep-space-blue);
-      color: var(--white);
-    }
-
+    /* CTA */
     .cta {
       padding: 80px 0;
       color: var(--white);
@@ -528,6 +520,7 @@
       background: var(--white);
     }
 
+    /* FOOTER */
     footer {
       background: #0d1c2a;
       color: var(--white);
@@ -568,6 +561,7 @@
       font-size: 0.88rem;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .hero-grid,
       .about-grid,
@@ -591,7 +585,8 @@
         margin-top: 16px;
       }
 
-      .article-grid {
+      .article-grid,
+      .stats-grid {
         grid-template-columns: 1fr;
       }
 
@@ -624,19 +619,13 @@
       .hero {
         padding: 56px 0;
       }
-
-      .article-card h3 {
-        font-size: 1.45rem;
-      }
     }
   </style>
 </head>
-
 <body>
   <header class="navbar">
     <div class="container nav-content">
       <a href="#home" class="logo">AI in Construction <span>&amp; Facilities Management</span></a>
-
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#about">About Me</a>
         <a href="#articles">Weekly Articles</a>
@@ -651,15 +640,12 @@
       <div class="container hero-grid">
         <div class="hero-copy">
           <div class="eyebrow">Sebastian Herrera</div>
-
           <h1>Project <span>Portfolio</span></h1>
-
           <p>
             A semester portfolio highlighting my work in artificial intelligence, construction technology,
             and facilities management. This site includes professional information, weekly article summaries,
             presentations, interactive components, and class projects completed throughout the course.
           </p>
-
           <div class="hero-actions">
             <a href="#projects" class="btn btn-primary">View Projects</a>
             <a href="#articles" class="btn btn-secondary">Explore Weekly Articles</a>
@@ -667,8 +653,7 @@
         </div>
 
         <div class="hero-card">
-          <div class="hero-image" role="img" aria-label="Sebastian Herrera profile image"></div>
-
+          <div class="hero-image" role="img" aria-label="Portfolio profile image placeholder"></div>
           <div class="hero-note">
             <strong>AI + CM</strong>
             <span>Connecting construction knowledge with practical artificial intelligence tools.</span>
@@ -684,39 +669,28 @@
             <div class="section-kicker">01 / About Me</div>
             <h2>Professional Profile</h2>
           </div>
-
           <p>
-            This section introduces who I am, my background, my professional interests,
-            and how this course connects to my career goals.
+            This section introduces who I am, my background, my professional interests, and how this course connects to my career goals.
           </p>
         </div>
 
         <div class="about-grid">
-          <div class="about-photo" role="img" aria-label="Sebastian Herrera about me photo"></div>
+          <div class="about-photo" role="img" aria-label="About me photo placeholder"></div>
 
           <div class="about-content">
             <article class="about-card">
               <h3>Who I Am</h3>
               <p>
-                My name is Sebastian Herrera. I am a Civil Engineer who graduated from the University of South Florida in 2022,
-                and I am currently pursuing a Master Degree in Construction and Facilities Engineering at the University of
-                North Carolina at Charlotte. This portfolio was created for my AI in Construction and Facilities Management
-                course to showcase the assignments, weekly article digests, interactive components, and projects completed
-                throughout the semester.
+                My name is Sebastian Herrera. I am a Civil Engineer who graduated from the University of South Florida in 2022, and I am currently pursuing a Master Degree in Construction and Facilities Engineering at the University of North Carolina at Charlotte. This portfolio was created for my AI in Construction and Facilities Management course to showcase the assignments, weekly article digests, interactive components, and projects completed throughout the semester.
               </p>
             </article>
 
             <article class="about-card">
               <h3>Professional Interests</h3>
               <p>
-                My professional interests are focused on practical construction management and field operations, including
-                estimating, scheduling, project controls, safety, concrete work, roadway and bridge construction, documentation,
-                and productivity tracking. I am especially interested in how AI can be used as a real construction tool to
-                improve communication, review documents faster, support planning decisions, organize project information,
-                and help teams work more efficiently without replacing field experience and professional judgment.
+                My professional interests are focused on practical construction management and field operations, including estimating, scheduling, project controls, safety, concrete work, roadway and bridge construction, documentation, and productivity tracking. I am especially interested in how AI can be used as a real construction tool to improve communication, review documents faster, support planning decisions, organize project information, and help teams work more efficiently without replacing field experience and professional judgment.
               </p>
             </article>
-
             <article id="contact" class="about-card">
               <h3>Contact</h3>
               <p>
@@ -739,10 +713,8 @@
             <div class="section-kicker">02 / Weekly Articles</div>
             <h2>Research & Reflections</h2>
           </div>
-
           <p>
-            Each weekly article includes a written summary, a presentation, and an interactive component
-            such as a video, podcast, or digital activity.
+            Each weekly article includes a written summary, a presentation, and an interactive component such as a video, podcast, or digital activity.
           </p>
         </div>
 
@@ -751,6 +723,9 @@
             <div>
               <div class="article-number">01</div>
               <h3>Progress in Computational Modelling for Concrete Durability and Its Integration with AI and Life-Cycle Assessment</h3>
+              <p>
+                Add the article title, a quick summary of the main idea, and how this topic connects to AI in construction or facilities management.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-01-summary.pdf" target="_blank">Summary</a>
@@ -763,6 +738,9 @@
             <div>
               <div class="article-number">02</div>
               <h3>Why Every Construction Company Needs AI Right Now</h3>
+              <p>
+                Add the article title, a short description of the assignment, and the main takeaway from the weekly reading or activity.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-02-summary.pdf" target="_blank">Summary</a>
@@ -775,6 +753,9 @@
             <div>
               <div class="article-number">03</div>
               <h3>The Unregulated Path to Superintelligence That Could Make Human Labor Obsolete</h3>
+              <p>
+                Replace this placeholder with the article topic, the class connection, and what you learned from the article.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-03-summary.pdf" target="_blank">Summary</a>
@@ -787,6 +768,9 @@
             <div>
               <div class="article-number">04</div>
               <h3>AI in Construction: A Few Game-Changing Tools Every Contractor Should Know</h3>
+              <p>
+                This weekly article explores AI applications and tools that can support architecture, engineering, construction, and facilities management workflows.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-04-summary.pdf" target="_blank">Summary</a>
@@ -799,6 +783,9 @@
             <div>
               <div class="article-number">05</div>
               <h3>AI-Driven Automation of Construction Cost Estimation: Integrating BIM with Large Language Models</h3>
+              <p>
+                This digest connects BIM and engineering tools with AI-supported workflows for design, coordination, modeling, and project delivery.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-05-summary.pdf" target="_blank">Summary</a>
@@ -811,6 +798,9 @@
             <div>
               <div class="article-number">06</div>
               <h3>A Beginner’s Guide to Building AI Agents</h3>
+              <p>
+                This article reviews AI agents and how they can automate tasks, organize information, and support more efficient project and facility workflows.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-06-summary.pdf" target="_blank">Summary</a>
@@ -823,6 +813,9 @@
             <div>
               <div class="article-number">07</div>
               <h3>Why Vibe Coding Is About to Change Work in Every Industry</h3>
+              <p>
+                This digest explains vibe coding and how AI-assisted development can help users create digital tools and prototypes with limited coding experience.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-07-summary.pdf" target="_blank">Summary</a>
@@ -835,6 +828,9 @@
             <div>
               <div class="article-number">08</div>
               <h3>The Role and Significance of AI in Transforming Modern Society</h3>
+              <p>
+                This weekly article discusses the broader societal impacts of AI, including labor, ethics, safety, trust, and changes in professional practice.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-08-summary.pdf" target="_blank">Summary</a>
@@ -847,6 +843,9 @@
             <div>
               <div class="article-number">09</div>
               <h3>Trump Renews Effort to Block States from Regulating AI</h3>
+              <p>
+                This digest focuses on government policy, AI rules, regulation, and how public guidance may shape responsible AI use in industry.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-09-summary.pdf" target="_blank">Summary</a>
@@ -859,6 +858,9 @@
             <div>
               <div class="article-number">10</div>
               <h3>When AI Outpaces Human Judgment in the Supply Chain</h3>
+              <p>
+                This article connects AI to procurement and supply chain management, including purchasing, vendor coordination, material availability, and project risk.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-10-summary.pdf" target="_blank">Summary</a>
@@ -871,6 +873,9 @@
             <div>
               <div class="article-number">11</div>
               <h3>Using AI to Flag High-Risk Videos</h3>
+              <p>
+                This digest discusses the relationship between AI and social media, including content creation, misinformation, communication, and digital influence.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-11-summary.pdf" target="_blank">Summary</a>
@@ -883,6 +888,9 @@
             <div>
               <div class="article-number">12</div>
               <h3>How AI Is Changing Higher Education</h3>
+              <p>
+                This weekly article explores how AI is affecting higher education, learning, academic work, student productivity, and classroom expectations.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-12-summary.pdf" target="_blank">Summary</a>
@@ -895,6 +903,9 @@
             <div>
               <div class="article-number">13</div>
               <h3>How Demis Hassabis Built a Lasting AI Legacy</h3>
+              <p>
+                This final digest highlights major AI voices and perspectives, connecting expert viewpoints to the future direction of artificial intelligence.
+              </p>
             </div>
             <div class="resource-links">
               <a href="Articles/article-13-summary.pdf" target="_blank">Summary</a>
@@ -913,69 +924,64 @@
             <div class="section-kicker">03 / Projects</div>
             <h2>Semester Work</h2>
           </div>
-
           <p>
-            A collection of the major projects completed during the semester, including objectives,
-            tools used, deliverables, and final outputs.
+            A collection of the major projects completed during the semester, including objectives, process, tools used, and final results.
           </p>
         </div>
 
         <div class="project-list">
           <article class="project-card">
-            <div class="project-image toggal-image" role="img" aria-label="TOGAL.AI project image"></div>
-
+            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
             <div class="project-content">
               <div class="project-tag">Project 01</div>
-              <h3>TOGAL.AI</h3>
-
+              <h3>AI Tool for Construction Workflow</h3>
               <p>
-                In this project, I used TOGAL.AI to perform quantity takeoffs for four different site plans.
-                The platform generated takeoff results directly from the drawings, allowing me to compare
-                automated quantity extraction across multiple sites. This project focused on exploring how AI
-                can support estimating workflows, improve speed, and simplify takeoff tasks in construction.
+                Describe the project objective, the problem you were trying to solve, the AI tools used,
+                and the final outcome. This could include estimating support, document review, scheduling,
+                risk analysis, safety planning, or facilities management applications.
               </p>
-
               <div class="project-meta">
-                <span>AI Takeoffs</span>
-                <span>Estimating</span>
-                <span>Construction Technology</span>
+                <span>AI Tools</span>
+                <span>Construction Management</span>
+                <span>Class Project</span>
               </div>
-
-              <div class="project-links">
-                <a href="Projects/togal-site-01.pdf" target="_blank">Site 01</a>
-                <a href="Projects/togal-site-02.pdf" target="_blank">Site 02</a>
-                <a href="Projects/togal-site-03.pdf" target="_blank">Site 03</a>
-                <a href="Projects/togal-site-04.pdf" target="_blank">Site 04</a>
-              </div>
+              <a href="#projects" target="_blank" class="btn btn-primary">View Project</a>
             </div>
           </article>
 
           <article class="project-card">
-            <div class="project-image final-project-image" role="img" aria-label="Final project image"></div>
-
+            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
             <div class="project-content">
               <div class="project-tag">Project 02</div>
-              <h3>Final Project: Investigating AI Adoption in Construction Companies</h3>
-
+              <h3>Facilities Management Analysis</h3>
               <p>
-                This final project explored how artificial intelligence is being adopted, implemented, and
-                managed within construction companies. The work combined academic literature with industry
-                interviews to identify current practices, common challenges, organizational readiness, and
-                the overall value companies are finding in AI adoption across the AEC industry.
+                Use this space to explain a facilities management project. Include the task, how AI supported the work,
+                what data or documents were reviewed, and what recommendations were developed.
               </p>
-
               <div class="project-meta">
-                <span>Research</span>
-                <span>AI Adoption</span>
-                <span>Construction Industry</span>
+                <span>Facilities</span>
+                <span>Analysis</span>
+                <span>Decision Support</span>
               </div>
+              <a href="#projects" target="_blank" class="btn btn-primary">View Project</a>
+            </div>
+          </article>
 
-              <div class="project-links">
-                <a href="Projects/final-project-literature-review.pdf" target="_blank">Literature Review</a>
-                <a href="Projects/final-project-research-report.pdf" target="_blank">Research Report</a>
-                <a href="Projects/final-project-presentation.pdf" target="_blank">Presentation</a>
-                <a href="Projects/final-project-interview-notes.pdf" target="_blank">Interview Notes</a>
+          <article class="project-card">
+            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
+            <div class="project-content">
+              <div class="project-tag">Project 03</div>
+              <h3>Final Course Project</h3>
+              <p>
+                Add the final project here. Mention the deliverables, the workflow followed, challenges faced,
+                and the final result. You can link to screenshots, PDFs, videos, or an interactive demo.
+              </p>
+              <div class="project-meta">
+                <span>Final Deliverable</span>
+                <span>Portfolio</span>
+                <span>Interactive Work</span>
               </div>
+              <a href="#projects" target="_blank" class="btn btn-primary">View Project</a>
             </div>
           </article>
         </div>
@@ -986,13 +992,11 @@
       <div class="container cta-box">
         <div>
           <h2>Built for GitHub Pages</h2>
-
           <p>
             This homepage is structured as a clean portfolio landing page. Replace the placeholder links,
             add your real images, and connect each article and project card to its own page or file.
           </p>
         </div>
-
         <a href="#home" class="btn btn-secondary">Back to Top</a>
       </div>
     </section>
@@ -1002,11 +1006,8 @@
     <div class="container footer-grid">
       <div>
         <div class="footer-brand">Portfolio</div>
-        <p class="copyright">
-          © 2026 Sebastian Herrera. AI in Construction & Facilities Management.
-        </p>
+        <p class="copyright">© 2026 Sebastian Herrera. AI in Construction & Facilities Management.</p>
       </div>
-
       <div class="footer-links">
         <a href="#about">About</a>
         <a href="#articles">Articles</a>
