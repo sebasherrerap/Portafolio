@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI in Construction & Facilities Management Portfolio</title>
+  <style>
+    :root {
+      --deep-space-blue: #13293d;
+      --baltic-blue: #006494;
+      --cerulean: #247ba0;
+      --blue-bell: #1b98e0;
+      --alice-blue: #e8f1f2;
+      --white: #ffffff;
+      --dark-text: #102030;
+      --muted-text: #5d6b78;
+      --border: rgba(19, 41, 61, 0.14);
+      --shadow: 0 18px 45px rgba(19, 41, 61, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--alice-blue);
+      color: var(--dark-text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(232, 241, 242, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-content {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--deep-space-blue);
+    }
+
+    .logo span {
+      color: var(--blue-bell);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--deep-space-blue);
+    }
+
+    .nav-links a {
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--blue-bell);
+    }
+
+    .nav-button {
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--deep-space-blue);
+      color: var(--white) !important;
+      box-shadow: 0 8px 20px rgba(19, 41, 61, 0.18);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 86vh;
+      display: grid;
+      align-items: center;
+      padding: 80px 0 60px;
+      background:
+        radial-gradient(circle at top right, rgba(27, 152, 224, 0.28), transparent 34%),
+        linear-gradient(135deg, var(--alice-blue) 0%, #ffffff 52%, rgba(36, 123, 160, 0.16) 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      margin-bottom: 22px;
+      border-radius: 999px;
+      color: var(--baltic-blue);
+      background: rgba(0, 100, 148, 0.1);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(3rem, 8vw, 7.4rem);
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      color: var(--deep-space-blue);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 span {
+      color: var(--blue-bell);
+    }
+
+    .hero p {
+      max-width: 650px;
+      font-size: 1.12rem;
+      color: var(--muted-text);
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--deep-space-blue);
+      color: var(--white);
+      box-shadow: 0 12px 28px rgba(19, 41, 61, 0.22);
+    }
+
+    .btn-secondary {
+      color: var(--deep-space-blue);
+      border-color: var(--border);
+      background: var(--white);
+    }
+
+    .hero-card {
+      position: relative;
+      background: var(--white);
+      padding: 20px;
+      border-radius: 30px;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+
+    .hero-image {
+      aspect-ratio: 4 / 5;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(19, 41, 61, 0.65), rgba(27, 152, 224, 0.28)),
+        url("images/profile.jpg") center/cover;
+      overflow: hidden;
+    }
+
+    .hero-note {
+      position: absolute;
+      left: -24px;
+      bottom: 42px;
+      max-width: 230px;
+      padding: 18px;
+      border-radius: 20px;
+      background: var(--deep-space-blue);
+      color: var(--white);
+      box-shadow: 0 20px 35px rgba(19, 41, 61, 0.25);
+    }
+
+    .hero-note strong {
+      display: block;
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 6px;
+      color: var(--blue-bell);
+    }
+
+    .hero-note span {
+      font-size: 0.86rem;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    /* GENERAL SECTION */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 36px;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      font-weight: 900;
+      color: var(--blue-bell);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2rem, 5vw, 4.4rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      color: var(--deep-space-blue);
+      text-transform: uppercase;
+    }
+
+    .section-header p {
+      max-width: 420px;
+      color: var(--muted-text);
+    }
+
+    /* ABOUT */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .about-photo {
+      min-height: 460px;
+      border-radius: 28px;
+      background:
+        linear-gradient(180deg, rgba(19, 41, 61, 0.08), rgba(19, 41, 61, 0.28)),
+        url("images/about-me.jpg") center/cover;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+
+    .about-content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-card {
+      background: var(--alice-blue);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px;
+    }
+
+    .about-card h3 {
+      color: var(--deep-space-blue);
+      margin-bottom: 10px;
+      font-size: 1.28rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      background: var(--white);
+      padding: 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.65rem;
+      color: var(--baltic-blue);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat span {
+      color: var(--muted-text);
+      font-size: 0.9rem;
+    }
+
+    /* WEEKLY ARTICLES */
+    .articles {
+      background: var(--alice-blue);
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .article-card {
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: 24px;
+      box-shadow: 0 14px 32px rgba(19, 41, 61, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .article-number {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--baltic-blue), var(--blue-bell));
+      color: var(--white);
+      font-weight: 900;
+      margin-bottom: 22px;
+    }
+
+    .article-card h3 {
+      font-size: 1.32rem;
+      color: var(--deep-space-blue);
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+
+    .article-card p {
+      color: var(--muted-text);
+      margin-bottom: 18px;
+    }
+
+    .resource-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .resource-links a {
+      font-size: 0.78rem;
+      font-weight: 800;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(36, 123, 160, 0.1);
+      color: var(--baltic-blue);
+    }
+
+    /* PROJECTS */
+    .projects {
+      background: var(--white);
+    }
+
+    .project-list {
+      display: grid;
+      gap: 26px;
+    }
+
+    .project-card {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 24px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 30px;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(232, 241, 242, 0.78) 100%);
+      box-shadow: 0 16px 36px rgba(19, 41, 61, 0.08);
+    }
+
+    .project-image {
+      min-height: 280px;
+      border-radius: 22px;
+      background:
+        linear-gradient(135deg, rgba(19, 41, 61, 0.72), rgba(27, 152, 224, 0.24)),
+        url("images/project-placeholder.jpg") center/cover;
+    }
+
+    .project-content {
+      padding: 12px 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .project-tag {
+      width: fit-content;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(27, 152, 224, 0.12);
+      color: var(--baltic-blue);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    .project-content h3 {
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      line-height: 1;
+      color: var(--deep-space-blue);
+      margin-bottom: 14px;
+      letter-spacing: -0.04em;
+    }
+
+    .project-content p {
+      color: var(--muted-text);
+      margin-bottom: 18px;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .project-meta span {
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      color: var(--deep-space-blue);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    /* CTA */
+    .cta {
+      padding: 80px 0;
+      color: var(--white);
+      background:
+        radial-gradient(circle at top left, rgba(27, 152, 224, 0.55), transparent 36%),
+        linear-gradient(135deg, var(--deep-space-blue), var(--baltic-blue));
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 5vw, 4.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      max-width: 650px;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .cta .btn-secondary {
+      color: var(--deep-space-blue);
+      background: var(--white);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0d1c2a;
+      color: var(--white);
+      padding: 42px 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-size: clamp(2.2rem, 8vw, 6rem);
+      font-weight: 900;
+      line-height: 0.85;
+      letter-spacing: -0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .footer-links a:hover {
+      color: var(--blue-bell);
+    }
+
+    .copyright {
+      margin-top: 18px;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.88rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .project-card,
+      .cta-box,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-note {
+        position: static;
+        margin-top: 16px;
+        max-width: none;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-header p {
+        margin-top: 16px;
+      }
+
+      .article-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        justify-content: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav-content {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .nav-button {
+        padding: 8px 12px;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+
+      .hero {
+        padding: 56px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="logo">Sebastian <span>Herrera</span></a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About Me</a>
+        <a href="#articles">Weekly Articles</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-button">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">AI in Construction & Facilities Management</div>
+          <h1>Project <span>Portfolio</span></h1>
+          <p>
+            A semester portfolio highlighting my work in artificial intelligence, construction technology,
+            and facilities management. This site includes professional information, weekly article summaries,
+            presentations, interactive components, and class projects completed throughout the course.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#articles" class="btn btn-secondary">Explore Weekly Articles</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-image" role="img" aria-label="Portfolio profile image placeholder"></div>
+          <div class="hero-note">
+            <strong>AI + CM</strong>
+            <span>Connecting construction knowledge with practical artificial intelligence tools.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">01 / About Me</div>
+            <h2>Professional Profile</h2>
+          </div>
+          <p>
+            This section introduces who I am, my background, my professional interests, and how this course connects to my career goals.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo" role="img" aria-label="About me photo placeholder"></div>
+
+          <div class="about-content">
+            <article class="about-card">
+              <h3>Who I Am</h3>
+              <p>
+                My name is Sebastian Herrera. I am building this portfolio to showcase the assignments,
+                tools, and projects completed in my AI in Construction and Facilities Management course.
+                The goal of this site is to present my work in a clean and professional way while showing
+                how AI can support planning, productivity, communication, analysis, and decision-making in construction.
+              </p>
+            </article>
+
+            <article class="about-card">
+              <h3>Professional Interests</h3>
+              <p>
+                I am interested in practical construction management applications such as estimating,
+                scheduling, project controls, safety, documentation, field productivity, and facilities operations.
+                This portfolio focuses on how AI can improve those workflows without replacing the judgment
+                and experience required in the field.
+              </p>
+            </article>
+
+            <div class="stats-grid">
+              <div class="stat">
+                <strong>3</strong>
+                <span>Main portfolio sections</span>
+              </div>
+              <div class="stat">
+                <strong>Weekly</strong>
+                <span>Article reviews and summaries</span>
+              </div>
+              <div class="stat">
+                <strong>AI</strong>
+                <span>Construction-focused tools and projects</span>
+              </div>
+            </div>
+
+            <article id="contact" class="about-card">
+              <h3>Contact</h3>
+              <p>
+                Email: <a href="mailto:your-email@example.com">your-email@example.com</a><br />
+                LinkedIn: <a href="https://www.linkedin.com/" target="_blank" rel="noopener">Add your LinkedIn profile here</a><br />
+                GitHub: <a href="https://github.com/" target="_blank" rel="noopener">Add your GitHub profile here</a>
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="articles" class="articles">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">02 / Weekly Articles</div>
+            <h2>Research & Reflections</h2>
+          </div>
+          <p>
+            Each weekly article includes a written summary, a presentation, and an interactive component such as a video, podcast, or digital activity.
+          </p>
+        </div>
+
+        <div class="article-grid">
+          <article class="article-card">
+            <div>
+              <div class="article-number">01</div>
+              <h3>Weekly Article 01</h3>
+              <p>
+                Add the article title, a quick summary of the main idea, and how this topic connects to AI in construction or facilities management.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-01-summary.pdf">Summary</a>
+              <a href="articles/article-01-presentation.pdf">PPT</a>
+              <a href="articles/article-01-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">02</div>
+              <h3>Weekly Article 02</h3>
+              <p>
+                Add the article title, a short description of the assignment, and the main takeaway from the weekly reading or activity.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-02-summary.pdf">Summary</a>
+              <a href="articles/article-02-presentation.pdf">PPT</a>
+              <a href="articles/article-02-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">03</div>
+              <h3>Weekly Article 03</h3>
+              <p>
+                Replace this placeholder with the article topic, the class connection, and what you learned from the article.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-03-summary.pdf">Summary</a>
+              <a href="articles/article-03-presentation.pdf">PPT</a>
+              <a href="articles/article-03-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">04</div>
+              <h3>Weekly Article 04</h3>
+              <p>
+                Add a brief overview of this weekly article and explain the construction or facilities management issue it relates to.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-04-summary.pdf">Summary</a>
+              <a href="articles/article-04-presentation.pdf">PPT</a>
+              <a href="articles/article-04-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">05</div>
+              <h3>Weekly Article 05</h3>
+              <p>
+                Use this card to describe the fifth weekly article, including the main point and why it matters for industry practice.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-05-summary.pdf">Summary</a>
+              <a href="articles/article-05-presentation.pdf">PPT</a>
+              <a href="articles/article-05-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">06</div>
+              <h3>Weekly Article 06</h3>
+              <p>
+                Add your summary for article six, focusing on the AI tool, workflow, or technology discussed in the assignment.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-06-summary.pdf">Summary</a>
+              <a href="articles/article-06-presentation.pdf">PPT</a>
+              <a href="articles/article-06-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">07</div>
+              <h3>Weekly Article 07</h3>
+              <p>
+                Replace this text with the article description and a quick explanation of your weekly deliverables.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-07-summary.pdf">Summary</a>
+              <a href="articles/article-07-presentation.pdf">PPT</a>
+              <a href="articles/article-07-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">08</div>
+              <h3>Weekly Article 08</h3>
+              <p>
+                Add the eighth weekly article here with a simple description of the reading, presentation, and interactive component.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-08-summary.pdf">Summary</a>
+              <a href="articles/article-08-presentation.pdf">PPT</a>
+              <a href="articles/article-08-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">09</div>
+              <h3>Weekly Article 09</h3>
+              <p>
+                Add a short paragraph explaining the ninth topic and the most useful lesson from that week.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-09-summary.pdf">Summary</a>
+              <a href="articles/article-09-presentation.pdf">PPT</a>
+              <a href="articles/article-09-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">10</div>
+              <h3>Weekly Article 10</h3>
+              <p>
+                Use this placeholder for article ten. Mention the AI concept, the class activity, and the construction-related application.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-10-summary.pdf">Summary</a>
+              <a href="articles/article-10-presentation.pdf">PPT</a>
+              <a href="articles/article-10-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">11</div>
+              <h3>Weekly Article 11</h3>
+              <p>
+                Add the eleventh weekly article summary and include the key takeaway you want visitors to remember.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-11-summary.pdf">Summary</a>
+              <a href="articles/article-11-presentation.pdf">PPT</a>
+              <a href="articles/article-11-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">12</div>
+              <h3>Weekly Article 12</h3>
+              <p>
+                Replace this with the twelfth article topic, your main reflection, and links to the completed assignment files.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-12-summary.pdf">Summary</a>
+              <a href="articles/article-12-presentation.pdf">PPT</a>
+              <a href="articles/article-12-interactive.html">Interactive</a>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div>
+              <div class="article-number">13</div>
+              <h3>Weekly Article 13</h3>
+              <p>
+                Add the final weekly article here. Summarize the topic and explain how it wraps up your semester learning.
+              </p>
+            </div>
+            <div class="resource-links">
+              <a href="articles/article-13-summary.pdf">Summary</a>
+              <a href="articles/article-13-presentation.pdf">PPT</a>
+              <a href="articles/article-13-interactive.html">Interactive</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">03 / Projects</div>
+            <h2>Semester Work</h2>
+          </div>
+          <p>
+            A collection of the major projects completed during the semester, including objectives, process, tools used, and final results.
+          </p>
+        </div>
+
+        <div class="project-list">
+          <article class="project-card">
+            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
+            <div class="project-content">
+              <div class="project-tag">Project 01</div>
+              <h3>AI Tool for Construction Workflow</h3>
+              <p>
+                Describe the project objective, the problem you were trying to solve, the AI tools used,
+                and the final outcome. This could include estimating support, document review, scheduling,
+                risk analysis, safety planning, or facilities management applications.
+              </p>
+              <div class="project-meta">
+                <span>AI Tools</span>
+                <span>Construction Management</span>
+                <span>Class Project</span>
+              </div>
+              <a href="projects/project-01.html" class="btn btn-primary">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
+            <div class="project-content">
+              <div class="project-tag">Project 02</div>
+              <h3>Facilities Management Analysis</h3>
+              <p>
+                Use this space to explain a facilities management project. Include the task, how AI supported the work,
+                what data or documents were reviewed, and what recommendations were developed.
+              </p>
+              <div class="project-meta">
+                <span>Facilities</span>
+                <span>Analysis</span>
+                <span>Decision Support</span>
+              </div>
+              <a href="projects/project-02.html" class="btn btn-primary">View Project</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-image" role="img" aria-label="Project image placeholder"></div>
+            <div class="project-content">
+              <div class="project-tag">Project 03</div>
+              <h3>Final Course Project</h3>
+              <p>
+                Add the final project here. Mention the deliverables, the workflow followed, challenges faced,
+                and the final result. You can link to screenshots, PDFs, videos, or an interactive demo.
+              </p>
+              <div class="project-meta">
+                <span>Final Deliverable</span>
+                <span>Portfolio</span>
+                <span>Interactive Work</span>
+              </div>
+              <a href="projects/project-03.html" class="btn btn-primary">View Project</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container cta-box">
+        <div>
+          <h2>Built for GitHub Pages</h2>
+          <p>
+            This homepage is structured as a clean portfolio landing page. Replace the placeholder links,
+            add your real images, and connect each article and project card to its own page or file.
+          </p>
+        </div>
+        <a href="#home" class="btn btn-secondary">Back to Top</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-brand">Portfolio</div>
+        <p class="copyright">© 2026 Sebastian Herrera. AI in Construction & Facilities Management.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#articles">Articles</a>
+        <a href="#projects">Projects</a>
+        <a href="mailto:your-email@example.com">Email</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
